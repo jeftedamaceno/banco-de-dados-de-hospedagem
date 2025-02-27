@@ -27,12 +27,12 @@ def main():
     print(pousada_beira_mar.hospedar(silas))  # Este deve falhar, pois só há 1 quarto
 
     # Criando um condomínio
-    dvera = Condominio('DVera', 'Rua Felipe Sampaio 208, Itapajé, CE, 62600-000', 1500, 10)
+    dvera = Condominio('DVera', 'Rua Felipe Sampaio 208, Itapajé, CE, 62600-000', 1500, [10, 5, 3])
 
     # Escolha do tipo de quarto
     tipo = int(input("Escolha um tipo de quarto (0 para Standard, 1 para Luxo, 2 para Suíte): "))
-    print(dvera.escolher_quarto(tipo, silas))
-    print(dvera.hospedar(silas))
+
+    print(dvera.hospedar(silas, tipo))
 
 if __name__ == "__main__":
     main()
